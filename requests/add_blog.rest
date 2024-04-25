@@ -3,6 +3,7 @@ Content-Type: application/json
 
 {
   "author": "Ronald McDonald",
-  "title": "McDonalds",
-  "url": "mcdonalds.com"
+  "title": 2,
+  "url": "mcdonalds.com",
+  "likes": "lol"
 }

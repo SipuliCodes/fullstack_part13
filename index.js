@@ -6,6 +6,8 @@ const {connectToDatabase} = require('./util/db')
 
 const blogsRouter = require("./controllers/blogs");
 
+const { errorHandler } = require('./util/middleware')
+
 app.use(express.json());
 
 app.use("/api/blogs", blogsRouter);
@@ -16,5 +18,7 @@ const start = async () => {
     console.log(`Server running on port ${PORT}`);
   });
 }
+
+app.use(errorHandler)
 
 start()
