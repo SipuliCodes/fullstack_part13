@@ -12,8 +12,8 @@ app.use("/api/blogs", blogsRouter);
 
 const start = async () => {
   await connectToDatabase()
-  app.listen(config.PORT, () => {
-    console.log(`Server running on port ${config.PORT}`);
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
   });
 }
 
