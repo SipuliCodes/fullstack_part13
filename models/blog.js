@@ -1,9 +1,9 @@
-const { Sequelize, Model, DataTypes } = require('sequelize')
-const config = require('../utils/config')
+const { Model, DataTypes } = require('sequelize')
 
-const sequelize = new Sequelize(config.DATABASE_URL);
+const {sequelize} = require('../util/db')
 
 class Blog extends Model { }
+
 Blog.init({
   id: {
     type: DataTypes.INTEGER,
