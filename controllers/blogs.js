@@ -11,8 +11,6 @@ router.post('/', async (req, res, next) => {
     const blog = await Blog.create(req.body)
     res.json(blog)
   } catch (error) {
-    console.log('name')
-    console.log(error.name)
     next(error)
   }
 })
@@ -39,8 +37,6 @@ router.put('/:id', async (req, res, next) => {
       throw new Error('invalidId')
     }
   } catch (error) {
-    console.log('name')
-    console.log(error.name)
     next(error)
   }
   })
