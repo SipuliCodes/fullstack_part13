@@ -8,7 +8,9 @@ const errorHandler = (error, req, res, next) => {
     return res.status(400).send({error: 'Some value were wrong'})
   }
   if (error instanceof Sequelize.ValidationError) {
-    return res.status(400).send({ error: "Something went wrong" });
+    console.log(12)
+    console.log(error)
+    return res.status(400).send({ error: error.message });
   }
   if (error.message === 'invalidId') {
     return res.status(400).send({error: 'Not found'})
