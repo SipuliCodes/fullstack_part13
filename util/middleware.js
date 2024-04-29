@@ -15,6 +15,9 @@ const errorHandler = (error, req, res, next) => {
   if (error.message === 'invalidId') {
     return res.status(400).send({error: 'Not found'})
   }
+  if (error instanceof TypeError) {
+    return res.status(400).send({error: error.message})
+  }
 
   next(error)
 }
