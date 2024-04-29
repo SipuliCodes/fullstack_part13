@@ -3,8 +3,8 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlB1ayIsImlkIjo0LCJpYXQiOjE3MTQ0MDc3MjB9.9X5QZP4Mcgzt-yfmv6o_gdoeRg1UrnYJ4Dgzv_FdGpw
 
 {
-  "author": "Puk Muk",
-  "title": "Anything fodo",
-  "url": "food.com",
-  "likes": 10
+    "author": "Someone",
+    "url": "google.com",
+    "title": "Something",
+    "likes": 500
 }

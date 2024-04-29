@@ -1,8 +1,8 @@
 const Blog = require('./blog')
 const User = require('./user')
 
-User.hasMany(Blog)
-Blog.belongsTo(User)
+User.hasMany(Blog, {foreignKey: 'userId'})
+Blog.belongsTo(User, {foreignKey: 'userId'})
 Blog.sync({alter: true})
 User.sync({alter: true})
 
