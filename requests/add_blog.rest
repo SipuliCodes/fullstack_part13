@@ -1,10 +1,11 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlB1ayIsImlkIjo0LCJpYXQiOjE3MTQ0MDc3MjB9.9X5QZP4Mcgzt-yfmv6o_gdoeRg1UrnYJ4Dgzv_FdGpw
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlR1a1R1a0BnbWFpbC5jb20iLCJpZCI6MSwiaWF0IjoxNzE0NDk5NTY4fQ.KmvUjKgNCNGn30WCvZvoVOQ5f-TgsMaGnjS5mEUuMY8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imthcmh1QGdtYWlsLmNvbSIsImlkIjoyLCJpYXQiOjE3MTQ0OTk2MjN9.8ueu-JK6B80kTJc7Igj82DLk_3zP9NCMi5PnszSBmhE
 
 {
-    "author": "Someone",
-    "url": "google.com",
-    "title": "Something",
-    "likes": 500
+    "author": "Poliisi",
+    "url": "Poliisi.com",
+    "title": "Timantti varastettiin museosta",
+    "likes": 1000
 }
