@@ -32,4 +32,24 @@ router.put('/:username', async (req, res, next) => {
   }
 })
 
+router.get('/:id', async (req, res, next) => {
+  try {
+    const user = await User.findByPk(req.params.id, {
+      attributes: { exclude: ['id', 'createdAt', 'updatedAt'] },
+      include: [{
+        model: Blog,
+        as: 'readings',
+        attributes: { exclude: ['createdAt', 'updatedAt', 'userId'] },
+        through: {
+          attributes: []
+        }
+      }]
+    })
+    res.json(user)
+  }
+  catch (error) {
+    next(error)
+  }
+})
+
 module.exports = router

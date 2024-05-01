@@ -28,6 +28,7 @@ Readinglist.init({
 }, {
   sequelize,
   underscored: true,
+  timestamps: false,
   modelName: 'readinglist'
 })
 
