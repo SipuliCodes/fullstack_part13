@@ -2,6 +2,7 @@ const { Sequelize } = require('sequelize')
 const jwt = require("jsonwebtoken");
 
 const { SECRET } = require("../util/config");
+const { Session, User } = require("../models");
 
 const errorHandler = (error, req, res, next) => {
   console.log(error.message)
@@ -25,13 +26,32 @@ const errorHandler = (error, req, res, next) => {
   next(error)
 }
 
+const sessionCheck = async (req, res, next) => {
+  try {
+    const session = await Session.findOne({
+      where: {
+        userId: req.decodedToken.id,
+        token: req.get("authorization").substring(7)
+      },
+      include: {
+        model: User
+      }
+    })
+    if (!session || session.user.disabled) {
+      return res.status(401).json({ error: "token expired" });
+    }
+  } catch (error) {
+    next(error)
+  }
+  next()
+}
+
 const tokenExtractor = (req, res, next) => {
   const authorization = req.get("authorization");
   if (authorization && authorization.toLowerCase().startsWith("bearer ")) {
     try {
       req.decodedToken = jwt.verify(authorization.substring(7), SECRET);
     } catch (error) {
-      console.log(error);
       next(error);
     }
   } else {
@@ -41,4 +61,4 @@ const tokenExtractor = (req, res, next) => {
 };
 
 
-module.exports = {errorHandler, tokenExtractor}
+module.exports = {errorHandler, tokenExtractor, sessionCheck}

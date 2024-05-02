@@ -1,12 +1,12 @@
 POST http://localhost:3003/api/blogs
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByw6R0a2lzQGdtYWlsLmNvbSIsImlkIjoyLCJpYXQiOjE3MTQ1Nzc0NTl9.-FmaLGT_d5jyilifhslBxpk56SyQwigFK7AxJRvHex8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InByw6R0a2lzQGdtYWlsLmNvbSIsImlkIjoyLCJpYXQiOjE3MTQ2NjUwNDd9.Vlgn18qzUkyKGj4srzYre9pHGcP438PNoiiW_FJt3SY
 //Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImtpbHBpc0BnbWFpbC5jb20iLCJpZCI6MSwiaWF0IjoxNzE0NTc3NDg1fQ.9vBJmtTT6ux1vFDtxv7-EFpqwRQN16VEu_uRPFU7U6o
 
 {
     "author": "Drawer",
     "url": "something.com",
-    "title": "My prescious painting",
-    "likes": 32,
-    "year": 1997
+    "title": "Testing",
+    "likes": 10000,
+    "year": 2018
 }
